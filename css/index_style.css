@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#site_wrapper {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: 150px 50px 400px 900px 150px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "he he" "na na" "s1 s1" "ma as" "fo fo";
+}
+
+header {
+    grid-area: he;
+    background: red;
+}
+
+#m_na {
+    grid-area: na;
+    background: blue;
+}
+
+#se01 {
+    grid-area: s1;
+    background: green;
+}
+
+main {
+    grid-area: ma;
+    background: cyan;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "a1" "a2" "a3";
+}
+
+#ar01 {
+    grid-area: a1;
+    background: yellow;
+}
+
+#ar02 {
+    grid-area: a2;
+    background: magenta;
+}
+
+#ar03 {
+    grid-area: a3;
+    background: grey;
+}
+
+aside {
+    grid-area: as;
+    background: orange;
+}
+
+footer {
+    grid-area: fo;
+    background: lightblue;
+}
+
+#manuellt_bildspel {
+    height: 400px;
+    width: 711px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* "Försökte först med flex men lyckades inte få den center, använde istället transform" */
+
+#bildspel_nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.b_label {
+    height: 10px;
+    width: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.b_label:hover {
+    background: rgb(255, 255, 255);
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+#bildspel_bilder {
+    height: 100%;
+    width: 500%;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: 0.7s;
+}
+
+.slide img {
+    height: 100%;
+    width: 100%;
+}
+
+#r01:checked ~ #slide_01 {
+    margin-left: 0;
+}
+
+#r02:checked ~ #slide_01 {
+    margin-left: -20%;
+}
+
+#r03:checked ~ #slide_01 {
+    margin-left: -40%;
+}
+
+#r04:checked ~ #slide_01 {
+    margin-left: -60%;
+}
+
+#r05:checked ~ #slide_01 {
+    margin-left: -80%;
+}
