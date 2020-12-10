@@ -9,15 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dokumentation projekt HT</title>
-
-    <style>
-        table, td, th {
-            border: 1px solid black
-        }
-    </style>
-
+    <link rel="stylesheet" href="docs_style.css">
 </head>
-<body>
+<body class="markdown-body">
 
     <h1>Dokumentation projekt HT</h1>
 
@@ -89,6 +83,120 @@
     <h3>Lektioner vecka 47</h3>
     <!-- Fyll på med dokumentation här. -->
     <p>Under torsdagslektionen gjorde jag 3 st. handskisser över hur layouten skulle se ut för de 3 obligatoriska sidorna (index-sidan, beställ sidan och receptsidan). I nulägget har jag endast noterat vilka element som ska användas och hur grid-nätet ser ut (rows, columns). Ska komplettera med längdmått efter jag har gjort sidorna eftersom jag antagligen kommer justera dem under arbetets gång.<br> På fredagen och utanför lektionerna skrev jag en del av koden för index-sidan. Valde även att göra ett manuellt bildspel inom section elementet. Koden för bildspelet innehåller en del syntax/ element som vi inte direkt har gått igenom.</p>
+    <h4>Bildspelet</h4>
+    <video id="video_01" controls>
+        <source src="img_and_videos/bildspel_docs_video.mp4" type="video/mp4">
+    </video>
+    <h4>Kod för bildspelet</h4>
+    <h5>HTML</h5>
+    <pre>
+        &lt;div id="manuellt_bildspel"&gt;
+            &lt;div id="bildspel_bilder"&gt;
+                &lt;input type="radio" name="r" id="r01" checked&gt;
+                &lt;input type="radio" name="r" id="r02"&gt;
+                &lt;input type="radio" name="r" id="r03"&gt;
+                &lt;input type="radio" name="r" id="r04"&gt;
+                &lt;input type="radio" name="r" id="r05"&gt;
+                &lt;div class="slide" id="slide_01"&gt;
+                    &lt;img src="img/Main_slide_01.png" alt=""&gt;
+                &lt;/div&gt;
+                &lt;div class="slide"&gt;
+                    &lt;img src="" alt=""&gt;
+                &lt;/div&gt;
+                &lt;div class="slide"&gt;
+                    &lt;img src="" alt=""&gt;
+                &lt;/div&gt;
+                &lt;div class="slide"&gt;
+                    &lt;img src="" alt=""&gt;
+                &lt;/div&gt;
+                &lt;div class="slide"&gt;
+                    &lt;img src="" alt=""&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;nav id="bildspel_nav"&gt;
+                &lt;label for="r01" class="b_label"&gt;&lt;/label&gt;
+                &lt;label for="r02" class="b_label"&gt;&lt;/label&gt;
+                &lt;label for="r03" class="b_label"&gt;&lt;/label&gt;
+                &lt;label for="r04" class="b_label"&gt;&lt;/label&gt;
+                &lt;label for="r05" class="b_label"&gt;&lt;/label&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+    </pre>
+    <h5>CSS</h5>
+    <pre>
+        #manuellt_bildspel {
+            height: 400px;
+            width: 711px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /* "Försökte först med flex men lyckades inte få den center, använde istället transform" */
+        
+        #bildspel_nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        
+        .b_label {
+            height: 10px;
+            width: 50px;
+            border: 2px solid rgb(255, 255, 255);
+            margin: 6px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        
+        .b_label:hover {
+            background: rgb(0, 136, 169);
+            border-color: rgb(0, 136, 169);
+        }
+        
+        input[name="r"] {
+            position: absolute;
+            visibility: hidden;
+        }
+        
+        #bildspel_bilder {
+            height: 100%;
+            width: 500%;
+            display: flex;
+        }
+        
+        .slide {
+            width: 20%;
+            transition: 0.7s;
+        }
+        
+        .slide img {
+            height: 100%;
+            width: 100%;
+        }
+        
+        #r01:checked ~ #slide_01 {
+            margin-left: 0;
+        }
+        
+        #r02:checked ~ #slide_01 {
+            margin-left: -20%;
+        }
+        
+        #r03:checked ~ #slide_01 {
+            margin-left: -40%;
+        }
+        
+        #r04:checked ~ #slide_01 {
+            margin-left: -60%;
+        }
+        
+        #r05:checked ~ #slide_01 {
+            margin-left: -80%;
+        }
+    </pre>
     <h4>Input</h4>
     <p>Input är ett element som tar emot någon sorts av information från användaren. Attributet "type" definerar vilken sorts information som användaren ska ge, radio som jag använder är klickbara ytor (standardformat är cirkel). Attributet "name" används också. "name" kan man se som en grupp där alla med samma värde kommunicerar med varandra. Standarden för "name" är att endast en av alla med samma värde kan vara "intryckt", som passar perfekt för ett sånt här bildspel eftersom man endast vill vissa en bild åt gången. "Checked" gör att den ytan är "intryckt" när sidan laddas in</p>
     <h4>Label</h4>
