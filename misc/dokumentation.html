@@ -47,9 +47,11 @@
         <tr>          
             <td>48</td>
             <td>
+            <p>Gör ev. klart koden för index-sidan. Börjar med contact-sidan.</p>
             <!-- Vad görs på lektionerna vecka 48? -->
             </td>
             <td>
+            <p>Gör klart contact-sidan. Bestäma restaurangens namn.</p>
             <!-- Vad görs utanför lektionerna vecka 48? -->
             </td>
         </tr>
@@ -57,9 +59,11 @@
         <tr>          
             <td>49</td>
             <td>
+            <p>Skriver koden för menu-sidan.</p>
             <!-- Vad görs på lektionerna vecka 49? -->
             </td>
             <td>
+            <p>Börjar på photoshop logan.</p>
             <!-- Vad görs utanför lektionerna vecka 49? -->
             </td>
         </tr>
@@ -67,9 +71,11 @@
         <tr>           
             <td>50</td>
             <td>
+            <p>Placerar bilder och photoshop bilder på sidorna.</p>
             <!-- Vad görs på lektionen vecka 50? -->
             </td>
             <td>
+            <p>Skriver extra på dokumentationen.</p>
             <!-- Vad görs utanför lektionen vecka 50? -->
             </td>
         </tr>
@@ -82,9 +88,9 @@
 
     <h3>Lektioner vecka 47</h3>
     <!-- Fyll på med dokumentation här. -->
-    <p>Under torsdagslektionen gjorde jag 3 st. handskisser över hur layouten skulle se ut för de 3 obligatoriska sidorna (index-sidan, beställ sidan och receptsidan). I nulägget har jag endast noterat vilka element som ska användas och hur grid-nätet ser ut (rows, columns). Ska komplettera med längdmått efter jag har gjort sidorna eftersom jag antagligen kommer justera dem under arbetets gång.<br> På fredagen och utanför lektionerna skrev jag en del av koden för index-sidan. Valde även att göra ett manuellt bildspel inom section elementet. Koden för bildspelet innehåller en del syntax/ element som vi inte direkt har gått igenom.</p>
+    <p>Under torsdagslektionen gjorde jag 3 st. handskisser över hur layouten skulle se ut för de 3 obligatoriska sidorna (index-sidan, contact och menu-sidan). I nulägget har jag endast noterat vilka element som ska användas och hur grid-nätet ser ut (rows, columns). Ska komplettera med längdmått efter jag har gjort sidorna eftersom jag antagligen kommer justera dem under arbetets gång.<br> På fredagen och utanför lektionerna skrev jag en del av koden för index-sidan. Valde även att göra ett manuellt bildspel inom section elementet. Koden för bildspelet innehåller en del syntax/ element som vi inte direkt har gått igenom.</p>
     <h4>Bildspelet</h4>
-    <video id="video_01" controls>
+    <video class="video_01" controls>
         <source src="img_and_videos/bildspel_docs_video.mp4" type="video/mp4">
     </video>
     <h4>Kod för bildspelet</h4>
@@ -198,28 +204,51 @@
         }
     </pre>
     <h4>Input</h4>
-    <p>Input är ett element som tar emot någon sorts av information från användaren. Attributet "type" definerar vilken sorts information som användaren ska ge, radio som jag använder är klickbara ytor (standardformat är cirkel). Attributet "name" används också. "name" kan man se som en grupp där alla med samma värde kommunicerar med varandra. Standarden för "name" är att endast en av alla med samma värde kan vara "intryckt", som passar perfekt för ett sånt här bildspel eftersom man endast vill vissa en bild åt gången. "Checked" gör att den ytan är "intryckt" när sidan laddas in</p>
+    <p>Input är ett element som tar emot någon sorts av information från användaren. Attributet "type" definerar vilken sorts information som användaren ska ge, radio som jag använder är klickbara ytor (standardformat är cirkel). Attributet "name" används också. "name" kan man se som en grupp där alla med samma värde kommunicerar med varandra. Standarden för "name" är att endast en av alla med samma värde kan vara "intryckt", som passar perfekt för ett sånt här bildspel eftersom man endast vill vissa en bild åt gången. "Checked" gör att den ytan är "intryckt" när sidan laddas in.</p>
     <h4>Label</h4>
-    <p></p>
+    <p>Label är ett element som "märker" andra. Det finns många användningsområden men i min kod används den som en förstoring av input element, alltså ett större område man kan klicka på. "for" attributet är det som avgör vilket element label ska märka.</p>
+    <h4>"~" Tecknet i CSS</h4>
+    <p>Tecknet "~" indikerar i min kod att när pseudo 'villkoret' "checked" gäller ska koden/ style innanför {} köras/ vara igång för elementen (class, id, tag) till höger om tecknet.</p>
 
 
     <h3>Lektioner vecka 48</h3>
     <!-- Fyll på med dokumentation här. -->
+    <p>Gjorde klart contact-sidan. Gjorde en favicon (bilden som syns i flik fältet) som länkas på liknande sätt som ett CSS stylesheet, däremot måste det anges att det ska läsas in som bildformatet bilden är i. Contact-sidan använder en del syntax som vi ej har gått igenom än i kursen. De var elementen "form", "textarea" och "button", och attributerna "placeholder", "cols" och "rows".</p>
+    <h4>Form</h4>
+    <p>Form elementet fungerar som det låter den agerar som en kommunikations länk mellan de innegånde elementen men även ev. mellan den själv och exempelvis SQL (då används "action" attributet). Samlar data ungerfär som en enkät.</p>
+    <h4>Textarea</h4>
+    <p>En yta som kan ta emot en större del text från användaren. Värdet "cols" tilldelas definerar hur många columer ytan har, och "rows" värdet bestämer antalet rader. Attributet "placeholder" har ett värde i sträng/ textform som är det synliga innan något skrivs i ytan.</p>
+    <h4>Button</h4>
+    <p>Button är en knapp som med hjälp av Form skulle kunna agera som submit knapp till en server.</p>
 
     <h3>Lektioner vecka 49</h3>
     <!-- Fyll på med dokumentation här. -->
+    <p>Gjorde menu-sidan, vilket gick ganska fort eftersom en stor del css kod återanvändes från style på de andra sidorna. Ingen ny syntax, "flex-wrap" användes för att få menu 'korten'. Jag använde symantiska "article" tagen för att öka sannolikheten att en uppläsare skulle förstå vad som ska läsas upp.</p>
 
     <h3>Lektioner vecka 50</h3>
     <!-- Fyll på med dokumentation här. -->
-
+    <p>Allt obligatoriskt var klart, och har gjort testning.</p>
 
     <h2>4. Testning</h2>
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? -->
+    <p>Både Chrome och Firefox fungerar bra på pc men på mobiler blir det problem med framförallt bildspelsstorleken eftersom den inte är "responsive". Detta kan fixas genom att göra media quarries som gäller vid vissa vh & vw. Men eftersom sidan skulle vara inriktad på desktop gjorde jag inga ändringar.<br>Det enda som skiljer sig mellan de två webbläsarna är att webkit, som jag använder för att styla scrollen, inte fungerar. Detta eftersom webkit är utvecklat för Chrome. Ansåg inte scrollen vara tillräckligt nödvänlig så valde att skippa den för firefox då den webbläsaren inte har någon direkt support för scroll edit.<br>Valideringen av html och css gav bra resultat (inga fel) och kontrasterna fick bra poäng.</p>
+    <h3>Färgerna mellan text och bakgrund</h3>
+    <img src="img_and_videos/color_img_01.png" alt="">
+    <img src="img_and_videos/color_img_02.png" alt="">
+    <h3>Hur det ser ut på Chrome</h3>
+    <video class="video_01" controls>
+        <source src="" type="video/mp4">
+    </video>
+    <h3>Hur det ser ut på Firefox</h3>
+    <video class="video_01" controls>
+        <source src="" type="video/mp4">
+    </video>
 
     <h2>5. Utvärdering (skrivs i slutet av arbetet, innan inlämning)</h2>
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
     Nyanserat: "hur hade det blivit om jag istället hade...?"
     Konkreta förbättringsförslag i produkt + process. -->
+    <p>Det jag tyckte gick bäst var bildspelet eftersom jag blev nöjd med hur transitionen blev "seemless" och att den övergår med samma färg i bakgrunden.<br>Däremot gick det sämre med menu sidan då jag tycker korten ser lite tråkiga ut och de är inte interaktiva. Det skulle ha blivit bättre ifall jag hade gjort flera skuggor utanför kortets border, samt lagt till en box runt som ser ut som en behållare. Sedan skulle jag även kunnat göra att kortet och skuggorna flytar lite uppåt (top) när man håller på den.<br>Processen är det jag tycker jag kan förbättra mig mest på, exempelvis kunde jag göra grund layouten på alla sidor istället för att göra klart den första. Det skulle ge en bättre bild utöver vilken styling som skulle passa bäst och ifall sidorna ser ut att hänga ihop. Jag skulle även kunnat variera mellan att skriva kod och photoshop eftersom det skulle göra att ifall bilderna inte passar behöver man inte ändra mycket då man inte har skrivit hela koden. En annan sak som jag tycker kunde förbättra projektet är kommentarer i HTML och CSS dokumentet, eftersom de kommenterar något som är bredvid dem. Så att man inte behöver byta flik, sida, etc.</p>
 
 </body>
 </html>

@@ -1025,6 +1025,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
     vertical-align: middle;
 }
 
-#video_01 {
+.video_01 {
     max-width: 100%;
 }
